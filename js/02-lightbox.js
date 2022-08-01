@@ -25,8 +25,7 @@ gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 const handleGallery = (evt) => {
     evt.preventDefault();
    let lightbox = new SimpleLightbox('.gallery a',  /* options */ );
-    lightbox.on('show.SimpleLightbox', function(){
-
-    })
+    lightbox.on('show.SimpleLightbox', function(){})
+    instance.close()
 }
 gallery.addEventListener('click', handleGallery);
