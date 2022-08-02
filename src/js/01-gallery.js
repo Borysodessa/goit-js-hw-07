@@ -23,6 +23,12 @@ const handleGallery = (evt) => {
     evt.preventDefault();
     const instance = basicLightbox.create(`<img src="${evt.target.dataset.source}"/>`);
     instance.show();
+    document.addEventListener('keydown', event => {
+        if (event.code === 'Escape') {
+            console.log(56465464)
+            instance.close();
+        }
+    });
 }
 gallery.addEventListener('click', handleGallery);
 
